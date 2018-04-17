@@ -8,7 +8,7 @@ firebase.initializeApp({
 
   });
  
-  // Agregar Documento
+  
 
    // Initialize Cloud Firestore through Firebase
    var db = firebase.firestore();
@@ -42,7 +42,7 @@ firebase.initializeApp({
        
 
 }
- //------------------leerr datos-------------//
+ //Listar datos//
  var tabla = document.getElementById('tabla');
  db.collection("clientes").onSnapshot((querySnapshot) => {
      tabla.innerHTML = '';
@@ -62,7 +62,7 @@ firebase.initializeApp({
      });
  });
 
-// Borrar datos
+// Eliminar
 function eliminar(id) {
     db.collection("clientes").doc(id).delete().then(function () {
         console.log("Document successfully deleted!");
@@ -71,7 +71,7 @@ function eliminar(id) {
     });
 }
 
-//Editar Documento
+//Editar
 
 function actualizar(id, nombre, email, direccion, telefono) {
     document.getElementById('nombre').value = nombre;
