@@ -85,7 +85,6 @@ function actualizar(id, nombre, email, direccion, telefono) {
     boton.onclick = function () {
         var washingtonRef = db.collection("clientes").doc(id);
 
-        // Set the "capital" field of the city 'DC'
         var nombre = document.getElementById('nombre').value;
         var email = document.getElementById('email').value;
         var direccion = document.getElementById('direccion').value;
